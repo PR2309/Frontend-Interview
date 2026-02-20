@@ -48,8 +48,10 @@ const CreateBlogForm = ({ isDark }: { isDark: boolean }) => {
       
       <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto space-y-4 pr-2">
         <div>
-          <label className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Title</label>
+          <label htmlFor="title" className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Title</label>
           <input
+            id="title"
+            title="Blog Title"
             type="text"
             placeholder="Enter article title..."
             value={title}
@@ -60,8 +62,10 @@ const CreateBlogForm = ({ isDark }: { isDark: boolean }) => {
         </div>
         
         <div>
-          <label className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Description</label>
+          <label htmlFor="description" className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Description</label>
           <textarea
+            id="description"
+            title="Blog Description"
             placeholder="Brief summary of your article..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -71,8 +75,10 @@ const CreateBlogForm = ({ isDark }: { isDark: boolean }) => {
         </div>
         
         <div>
-          <label className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Cover Image URL <span className={`text-xs font-normal ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>(Optional)</span></label>
+          <label htmlFor="imageUrl" className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Cover Image URL <span className={`text-xs font-normal ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>(Optional)</span></label>
           <input
+            id="imageUrl"
+            title="Blog Image URL"
             type="url"
             placeholder="https://example.com/image.jpg"
             value={imageUrl}
@@ -87,9 +93,11 @@ const CreateBlogForm = ({ isDark }: { isDark: boolean }) => {
         </div>
         
         <div>
-          <label className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Categories</label>
+          <label htmlFor="category" className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Categories</label>
           <div className="flex gap-2 mb-2">
             <input
+              id="category"
+              title="Blog Category"
               type="text"
               placeholder="Add a category..."
               value={category}
@@ -139,8 +147,10 @@ const CreateBlogForm = ({ isDark }: { isDark: boolean }) => {
         </div>
         
         <div>
-          <label className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Content</label>
+          <label htmlFor="content" className={`block text-sm font-semibold mb-2 transition-colors ${isDark ? 'text-slate-200' : 'text-slate-700'}`}>Content</label>
           <textarea
+            id="content"
+            title="Blog Content"
             placeholder="Write your full article content here..."
             value={content}
             onChange={(e) => setContent(e.target.value)}
